@@ -1,33 +1,20 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faCog, faFileAlt, faCalendarAlt, faChat, faMusic, faVideo, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import styles from './IconInterface.module.css';
 
-const IconInterface = () => {
+import NavBar from './components/navBar/NavBar'
+import Body from './components/firstPage/body/Body'
+import Footer from './components/firstPage/footer/Footer'
+
+export default function Home() {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <FontAwesomeIcon icon={faHome} className={styles.icon} />
-      </header>
-
-      <main className={styles.main}>
-        <div className={styles.section}>
-          <FontAwesomeIcon icon={faHome} className={styles.icon} />
-          <FontAwesomeIcon icon={faCog} className={styles.icon} />
+    <div className='bg-[#c6f2e9] h-screen'>
+        <div>
+          <NavBar />
         </div>
-
-        <div className={styles.section}>
-          <FontAwesomeIcon icon={faFileAlt} className={styles.icon} />
-          <FontAwesomeIcon icon={faCalendarAlt} className={styles.icon} />
+        <div>
+          <Body />
         </div>
-
-        <div className={styles.section}>
-          <FontAwesomeIcon icon={faMusic} className={styles.icon} />
-          <FontAwesomeIcon icon={faGamepad} className={styles.icon} />
+        <div>
+          <Footer />
         </div>
-      </main>
     </div>
-  );
-};
-
-export default IconInterface;
+  )
+}
